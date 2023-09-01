@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./indianflag.jpg">
+    <title>Indian Flag</title>
+    <style>
+        body {
+            background-color: #4ce740;
+            display: flex;
+            flex-direction: column; /* Added to stack items vertically */
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .flag {
+            width: 31.25rem;
+            max-width: 100%;
+            aspect-ratio: 3/2;
+        }
+        
+        .top,
+        .middle,
+        .bottom {
+            height: calc(100% / 3);
+            width: 100%;
+        }
+        
+        .top {
+            background-color: #ff9933;
+        }
+        
+        .middle {
+            background-color: #fff;
+            display: grid;
+            place-items: center;
+        }
+        
+        .bottom {
+            background-color: #138808;
+        }
+        
+        .wheel {
+            border: 0.125rem solid #000080;
+            border-radius: 50%;
+            height: 95%;
+            aspect-ratio: 1/1;
+            position: relative;
+            animation: spin 5s linear infinite; /* Added animation */
+        }
+        
+        .line {
+            background-color: #000080;
+            height: 100%;
+            width: 0.125rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+        
+        /* Updated line rotations for animation */
+        .line:nth-child(1) { transform: translate(-50%, -50%) rotate(15deg); }
+        .line:nth-child(2) { transform: translate(-50%, -50%) rotate(calc(15deg * 2)); }
+        .line:nth-child(3) { transform: translate(-50%, -50%) rotate(calc(15deg * 3)); }
+        .line:nth-child(4) { transform: translate(-50%, -50%) rotate(calc(15deg * 4)); }
+        .line:nth-child(5) { transform: translate(-50%, -50%) rotate(calc(15deg * 5)); }
+        .line:nth-child(6) { transform: translate(-50%, -50%) rotate(calc(15deg * 6)); }
+        .line:nth-child(7) { transform: translate(-50%, -50%) rotate(calc(15deg * 7)); }
+        .line:nth-child(8) { transform: translate(-50%, -50%) rotate(calc(15deg * 8)); }
+        .line:nth-child(9) { transform: translate(-50%, -50%) rotate(calc(15deg * 9)); }
+        .line:nth-child(10) { transform: translate(-50%, -50%) rotate(calc(15deg * 10)); }
+        .line:nth-child(11) { transform: translate(-50%, -50%) rotate(calc(15deg * 11)); }
+        .line:nth-child(12) { transform: translate(-50%, -50%) rotate(calc(15deg * 12)); }
+        
+        /* Added animation keyframes */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        h1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; margin-top: 1rem;">Congratulations India #Chandrayaan3 </h1>
+    <div class="flag">
+        <div class="top"></div>
+        <div class="middle">
+            <div class="wheel">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+</body>
+</html>
